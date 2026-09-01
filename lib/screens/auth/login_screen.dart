@@ -72,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 style: const TextStyle(color: Colors.white),
                 decoration: _input('Password'),
               ),
-              if (_error != null) ...[
+              if (_error != null) ...[,
                 const SizedBox(height: 12),
                 Text(_error!, style: const TextStyle(color: Colors.redAccent)),
               ],
