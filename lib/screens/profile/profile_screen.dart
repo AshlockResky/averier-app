@@ -64,7 +64,7 @@ class ProfileScreen extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(email, style: const TextStyle(color: Colors.white54)),
                 const SizedBox(height: 30),
-                _infoCard('Available Balance', '\ \]{balance.toStringAsFixed(2)}'),
+                __infoCard('Available Balance', '\\[ {balance.toStringAsFixed(2)}'),
                 const SizedBox(height: 12),
                 _infoCard('Total Earned', '\$${totalEarned.toStringAsFixed(2)}'),
               ],
