@@ -1,5 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:provider/provider.dart';
 import 'services/auth_service.dart';
 import 'services/payment_service.dart';
@@ -24,6 +25,7 @@ class AverierApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'Averier',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           useMaterial3: true,
           brightness: Brightness.dark,
@@ -40,7 +42,7 @@ class _AuthWrapper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder(
+    return StreamBuilder<User?>(
       stream: FirebaseAuth.instance.authStateChanges(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
