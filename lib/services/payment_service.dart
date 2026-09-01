@@ -19,7 +19,7 @@ class PaymentService {
     }
 
     if (amount < AppConstants.minWithdrawal) {
-      throw Exception('Minimum withdrawal is \\[ {AppConstants.minWithdrawal}');
+      throw Exception('Minimum withdrawal is \ \]{AppConstants.minWithdrawal}');
     }
 
     final userRef = _db.collection('users').doc(userId);
